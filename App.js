@@ -38,18 +38,19 @@ let input = document.createElement("input");
 input.type = "text";
 input.id = "task";
 input.placeholder = "Enter task";
-input.style.border = "1 solid black";
+input.style.border = "2 solid #90D5FF";
 // input.style.marginInline = "5%";
 input.style.padding = "20px";
 input.style.borderRadius = "10px";
 input.style.width = "80%";
+input.style.fontFamily = "Arial, Helvetica, sans-serif";
 
 div.appendChild(input);
 
 const taskBtn = document.createElement("button");
 taskBtn.textContent = "Add Task ➕";
 taskBtn.style.cursor = "pointer";
-taskBtn.style.backgroundColor = "lightgrey";
+taskBtn.style.backgroundColor = "#90D5FF";
 taskBtn.style.borderRadius = "9px";
 taskBtn.style.padding = "10px";
 taskBtn.style.fontFamily = "Arial, Helvetica, sans-serif";
@@ -92,7 +93,7 @@ taskBtn.addEventListener("click", () => {
   delBtn.style.padding = "6px";
   delBtn.style.marginInline = "10px";
   delBtn.style.cursor = "pointer";
-  delBtn.style.backgroundColor = "lightgrey";
+  delBtn.style.backgroundColor = "#90D5FF";
   delBtn.id = "delBtn";
 
   listItem.appendChild(checkbox);
