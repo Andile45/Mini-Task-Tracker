@@ -15,7 +15,7 @@ root.style.boxShadow = "10px 10px 36px 2px rgba(0,0,0,0.75)";
 
 const body = document.querySelector("body");
 body.style.backgroundImage = "url('asset/unnamed.png')";
-body.style.backgroundSize = "cover";
+body.style.backgroundSize = "100%";
 body.style.backgroundPosition = "center";
 body.style.backgroundRepeat = "no-repeat";
 
@@ -23,6 +23,8 @@ const heading = document.createElement("h1");
 heading.textContent = "Mini Task Tracker";
 heading.style.textAlign = "center";
 heading.style.fontFamily = "Arial, Helvetica, sans-serif";
+heading.style.color = "#90D5FF";
+
 root.appendChild(heading);
 
 const div = document.createElement("div");
@@ -43,6 +45,7 @@ input.style.border = "2 solid #90D5FF";
 input.style.padding = "20px";
 input.style.borderRadius = "10px";
 input.style.width = "80%";
+input.style.fontWeight = "bold";
 input.style.fontFamily = "Arial, Helvetica, sans-serif";
 
 div.appendChild(input);
@@ -54,7 +57,7 @@ taskBtn.style.backgroundColor = "#90D5FF";
 taskBtn.style.borderRadius = "9px";
 taskBtn.style.padding = "10px";
 taskBtn.style.fontFamily = "Arial, Helvetica, sans-serif";
-
+taskBtn.style.fontWeight = "bold";
 div.appendChild(taskBtn);
 
 const taskList = document.createElement("ul");
@@ -63,6 +66,7 @@ root.appendChild(taskList);
 const taskRemaining = document.createElement("p");
 taskRemaining.style.fontFamily = "Arial, Helvetica, sans-serif";
 taskRemaining.id = "taskLeft";
+taskRemaining.fontSize = "larger";
 
 root.appendChild(taskRemaining);
 
@@ -79,7 +83,9 @@ taskBtn.addEventListener("click", () => {
   const listItem = document.createElement("li");
   listItem.style.padding = "15px";
   listItem.style.listStyle = "none";
-
+  listItem.style.fontFamily = "Arial, Helvetica, sans-serif";
+  listItem.style.fontWeight = "Bold";
+  listItem.style.fontSize = "larger"
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.id = "checkB";
@@ -93,8 +99,11 @@ taskBtn.addEventListener("click", () => {
   delBtn.style.padding = "6px";
   delBtn.style.marginInline = "10px";
   delBtn.style.cursor = "pointer";
+  delBtn.style.fontFamily = "Arial, Helvetica, sans-serif";
+  delBtn.style.fontWeight = "Bold";
   delBtn.style.backgroundColor = "#90D5FF";
   delBtn.id = "delBtn";
+
 
   listItem.appendChild(checkbox);
   listItem.appendChild(span);
