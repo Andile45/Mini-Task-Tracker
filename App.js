@@ -23,7 +23,8 @@ const heading = document.createElement("h1");
 heading.textContent = "Mini Task Tracker";
 heading.style.textAlign = "center";
 heading.style.fontFamily = "Arial, Helvetica, sans-serif";
-heading.style.color = "#90D5FF";
+// heading.style.color = "#90D5FF";
+heading.style.color = "#45e2e7ff";
 
 root.appendChild(heading);
 
@@ -53,7 +54,7 @@ div.appendChild(input);
 const taskBtn = document.createElement("button");
 taskBtn.textContent = "Add Task ➕";
 taskBtn.style.cursor = "pointer";
-taskBtn.style.backgroundColor = "#90D5FF";
+taskBtn.style.backgroundColor = "#45e2e7ff";
 taskBtn.style.borderRadius = "9px";
 taskBtn.style.padding = "10px";
 taskBtn.style.fontFamily = "Arial, Helvetica, sans-serif";
@@ -66,6 +67,7 @@ root.appendChild(taskList);
 const taskRemaining = document.createElement("p");
 taskRemaining.style.fontFamily = "Arial, Helvetica, sans-serif";
 taskRemaining.id = "taskLeft";
+taskRemaining.style.padding = "15px";
 taskRemaining.fontSize = "larger";
 
 root.appendChild(taskRemaining);
@@ -84,8 +86,8 @@ taskBtn.addEventListener("click", () => {
   listItem.style.padding = "15px";
   listItem.style.listStyle = "none";
   listItem.style.fontFamily = "Arial, Helvetica, sans-serif";
-  listItem.style.fontWeight = "Bold";
-  listItem.style.fontSize = "larger"
+  // listItem.style.fontWeight = "Bold";
+  listItem.style.fontSize = "larger";
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.id = "checkB";
@@ -94,16 +96,15 @@ taskBtn.addEventListener("click", () => {
   span.textContent = userInput;
 
   const delBtn = document.createElement("button");
-  delBtn.textContent = "Delete Task ❌";
+  delBtn.textContent = "Delete Task 🗑️";
   delBtn.style.borderRadius = "10px";
   delBtn.style.padding = "6px";
   delBtn.style.marginInline = "10px";
   delBtn.style.cursor = "pointer";
   delBtn.style.fontFamily = "Arial, Helvetica, sans-serif";
   delBtn.style.fontWeight = "Bold";
-  delBtn.style.backgroundColor = "#90D5FF";
+  delBtn.style.backgroundColor = "#45e2e7ff";
   delBtn.id = "delBtn";
-
 
   listItem.appendChild(checkbox);
   listItem.appendChild(span);
@@ -145,3 +146,23 @@ taskBtn.addEventListener("click", () => {
     updateTaskCount();
   });
 });
+
+// //Media queries with Dom manipulation
+
+// const mediaQueries = window.matchMedia("(max-width: 460px)");
+
+// function handleScreenChange(e) {
+//   if (e.matches) {
+//     body.style.backgroundImage = "url('asset/unnamed.png')";
+//     body.style.backgroundSize = "100%";
+//     body.style.height = "100%";
+//     body.style.backgroundPosition = "center";
+//     body.style.backgroundRepeat = "no-repeat";
+//   }
+// }
+
+// //initial check
+
+// handleScreenChange(mediaQueries);
+// //listern for screen size change
+// mediaQueries.addEventListener("change", handleScreenChange);
